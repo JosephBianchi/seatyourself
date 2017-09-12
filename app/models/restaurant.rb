@@ -7,7 +7,12 @@ class Restaurant < ApplicationRecord
   # end
 
   def has_capacity?(partysize)
-    capacity - partysize >= 0
+
+    capacity - current_occs - partysize >= 0
+  end
+
+  def current_occs
+    reservations.sum { |res| res.partysize }
   end
 
 
