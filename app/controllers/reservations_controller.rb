@@ -10,12 +10,19 @@ class ReservationsController < ApplicationController
     @reservation.restaurant_id = @restaurant.id
 
     if @reservation.save
-      redirect_to root_url
+
+      redirect_to restaurant_reservation_url(@restaurant, @reservation)
     else
       render 'new'
     end
   end
 
+
+  def show
+    @reservation = Reservation.find(params[:id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
+
+  end
   private
     def reservation_params
       params.require(:reservation).permit(:partysize, :time, :day)
