@@ -3,8 +3,8 @@ class Reservation < ApplicationRecord
   validate :can_make
 
   def can_make
-    unless restaurant.has_capacity?(partysize)
-      errors.add(:base, "at max capacity")
+    unless restaurant.has_capacity?(partysize, day)
+      errors.add(:base, "at max capacity for day")
     end
   end
 
