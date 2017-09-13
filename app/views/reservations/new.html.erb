@@ -11,7 +11,7 @@ $( function() {
 
 
 
-<%= form_for @reservation do |f| %>
+<%= form_for [@restaurant, @reservation] do |f| %>
   <%= f.label :day %>
   <%= f.text_field :day %>
 
@@ -20,7 +20,7 @@ $( function() {
 
   <%= f.label :partysize %>
   <%= f.text_field :partysize %>
-  
+
   <%= f.submit "Reserve" %>
 
 <% end %>

@@ -8,4 +8,4 @@
 <p>Closes at: <%= @restaurant.closing_hour %></p>
 <p><%= link_to "Restaurant's Webpage", "http://"+@restaurant.url, target: :_blank %> </p>
 
-<%= link_to "CREATE NEW RESERVATION", root_path %>
+<%= link_to "CREATE NEW RESERVATION", new_restaurant_reservation_path(@restaurant.id) %>
