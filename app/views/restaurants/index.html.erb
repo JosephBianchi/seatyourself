@@ -3,5 +3,5 @@
 <% @restaurants.each do |rest| %>
   <p><%= rest.name %> |
   <%= rest.address %> |
- <%= link_to rest.name, "http://"+rest.url %>
+ <%= link_to rest.name, "http://"+rest.url, target: :_blank %> <hr>
 <% end %>

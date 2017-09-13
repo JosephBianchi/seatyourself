@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+
+$( function() {
+  $( "#reservation_day" ).datepicker();
+} );
+</script>
+
+
+
+<%= form_for @reservation do |f| %>
+  <%= f.label :day %>
+  <%= f.text_field :day %>
+
+  <%= f.label :time %>
+  <%= f.text_field :time %>
+
+  <%= f.label :partysize %>
+  <%= f.text_field :partysize %>
+  
+  <%= f.submit "Reserve" %>
+
+<% end %>
