@@ -1,0 +1,7 @@
+<h1>Restaurants</h1>
+
+<% @restaurants.each do |rest| %>
+  <p><%= rest.name %> |
+  <%= rest.address %> |
+ <%= link_to rest.name, "http://"+rest.url %>
+<% end %>

@@ -6,19 +6,20 @@ class Restaurant < ApplicationRecord
   #   - reservations on hour
   # end
 
-  def has_capacity?(partysize, day)
+  def has_capacity?(partysize, day, time)
 
-    capacity - day_current_occs(day) - partysize >= 0
+    capacity - day_current_occs(day, time) - partysize >= 0
   end
 
   # def current_occs
   #   reservations.sum { |res| res.partysize }
   # end
 
-  def day_current_occs(day)
-    reservations.where(day: day).sum { |res| res.partysize }
+  def day_current_occs(day, time)
+    reservations.where(day: day).where(time: time).sum { |res| res.partysize }
   end
- 
+
+
 
 
 

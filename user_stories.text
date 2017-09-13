@@ -9,9 +9,8 @@ Need
 - menu
 - a list of available time slots
 6. As a customer, when I go to a restaurant's page, I can make a reservation for the time and party size of my choice.
-8. As a customer, if I try to make a reservation outside of a restaurant's opening hours, the reservation will not be made and I will be shown a message indicating why.
 9. As a customer, if I try to make a reservation at a time when a restaurant is already at max capacity, the reservation will not be made and I will be shown a message indicating why.
-10. As a customer, if I try to make a reservation for a date in the past, the reservation will not be made and I will be shown a message indicating why.
+
 11. As a customer, when I make a reservation, I want to be shown a confirmation message with the details of my reservation.
 
 
@@ -24,6 +23,8 @@ Need
 
 Be Nice
 
+8. As a customer, if I try to make a reservation outside of a restaurant's opening hours, the reservation will not be made and I will be shown a message indicating why.
+10. As a customer, if I try to make a reservation for a date in the past, the reservation will not be made and I will be shown a message indicating why.
 4. As a visitor, I want to sign up for a customer account so that I can make reservations online.
 5. As a user I can login and logout.
 7. As a customer I can go to a page to see a list of the reservations I’ve booked.
