@@ -1,1 +1,11 @@
-<h1>do</h1>
+<h1><%= @restaurant.name %> </h1>
+
+
+
+<p> Address: <%= @restaurant.address %></p>
+<p>Telephone:<%=@restaurant.tele %></p>
+<p>Opens at: <%= @restaurant.opening_hour %></p>
+<p>Closes at: <%= @restaurant.closing_hour %></p>
+<p><%= link_to "Restaurant's Webpage", "http://"+@restaurant.url, target: :_blank %> </p>
+
+<%= link_to "CREATE NEW RESERVATION", root_path %>
