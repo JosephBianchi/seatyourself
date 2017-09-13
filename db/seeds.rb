@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Restaurant.create(name:"filler" address:"filler", url:"www.filler.com", tele:"filler", price_range:integer_0-5_filler, summary:"filler", capacity:integer_filler, opening_hour:integer_0_24_filler, closing_hour:integer_0-24_filler)
+Restaurant.create(name:"Montanas", address:"filler", url:"www.montanas.ca", tele:"filler", price_range:3, summary:"Good Shit", capacity:200, opening_hour:11, closing_hour:2)
