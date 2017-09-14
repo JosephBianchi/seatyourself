@@ -3,6 +3,7 @@ class Reservation < ApplicationRecord
   validates :time, presence: true
   validates :partysize, presence: true
   belongs_to :restaurant
+  belongs_to :user
   validate :can_make
 
 
