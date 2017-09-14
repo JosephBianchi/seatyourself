@@ -1,6 +1,7 @@
 class Restaurant < ApplicationRecord
   has_many :reservations
 
+
   # def capacity(date, hour)
   #   - find reservations on date
   #   - reservations on hour
@@ -10,7 +11,7 @@ class Restaurant < ApplicationRecord
 
     capacity - day_current_occs(day, time) - partysize >= 0
   end
-
+# 
   # def current_occs
   #   reservations.sum { |res| res.partysize }
   # end
