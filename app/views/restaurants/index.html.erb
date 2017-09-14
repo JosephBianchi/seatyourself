@@ -1,12 +1,50 @@
-<h1>Restaurants</h1>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+<body>
 
 
+<!-- Sidebar (hidden by default) -->
+<!-- <nav class="Sidebar" id="mySidebar">
+  <a href="javascript:void(0)" onclick="SY_Close()" class="bar_item button">Close Menu</a>
+  <a href="#reservations" onclick="SY_Close()" class="bar_item button">Reservations</a>
+  <a href="#about" onclick="SY_Close()" class="bar_item button">About</a>
+</nav> -->
+
+
+<!-- Top menu -->
+<header>
+  <!-- <div class="button" onclick="SY_Open()">☰</div> -->
+  <h1>SeatYourself</h1>
+  <!-- <h3>Log in</h3> -->
+</header>
+
+<section ="about">
+  <div class="outter_wrapper">
+    <!-- <h2>title</h2><br> -->
+    <img src="" alt="SeatYourself" class="image">
+    <div class="inner_wrapper">
+      <h4><b>Make Your Reservations</b></h4>
+      <p>Navigate through a fantastic selections of your local city's most popular restaurants. Select a restaurant of your choice, and save time making reservations with the click of a button.</p>
+    </div>
+  </div>
+</section>
 
 <% @restaurants.each do |rest| %>
+  <h1><%= link_to rest.name,
+  restaurant_path(rest)%></h1>
+ <h2><%= rest.address %></h2>
+ <p><%= link_to "Restaurant Site", "http://"+rest.url, target: :_blank %></p><hr>
+<% end %>
 
 
-  <p> <%= link_to rest.name,
-  restaurant_path(rest)%> |
- <%= rest.address %> |
- <%= link_to rest.name, "http://"+rest.url, target: :_blank %><hr>
- <% end %>
+
+<script>
+// Script to open and close sidebar
+function SY_Open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function SY_Close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+</body>
