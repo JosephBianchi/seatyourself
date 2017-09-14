@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+
+  def show
+    @reservations =  
+  end
+
+
   def new
     @user = User.new
   end

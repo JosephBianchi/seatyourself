@@ -8,6 +8,7 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = Reservation.new(reservation_params)
     @reservation.restaurant_id = @restaurant.id
+    @reservation.user_id = current_user.id
 
     if @reservation.save
 
