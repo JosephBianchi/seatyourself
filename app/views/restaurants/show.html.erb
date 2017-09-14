@@ -8,6 +8,6 @@
 <p>Closes at: <%= @restaurant.closing_hour %></p>
 <p><%= link_to "Restaurant's Webpage", "http://"+@restaurant.url, target: :_blank %> </p>
 
-<p><%= link_to "CREATE NEW RESERVATION", new_restaurant_reservation_path(@restaurant.id) %></p><br>
+<p><%= link_to("CREATE NEW RESERVATION", new_restaurant_reservation_path(@restaurant.id), :class => "new_resv") %></p><br>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1478015.5634402523!2d-80.44195165129489!3d43.65338719210714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C+ON!5e0!3m2!1sen!2sca!4v1505348590283" width="600" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
