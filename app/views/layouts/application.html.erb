@@ -9,17 +9,18 @@
 <body>
 
 <%= flash.notice %>
-
-<%= link_to "Restaurants", root_path %>
-<p class=“userinfo”>
-  <% if current_user %>
-    Signed in as <%= current_user.email %><br>
-     <%= link_to "Log out", session_path("logout"), :method => :delete %><br>
-     <%= link_to "My Reservations", user_path(session[:user_id]) %>
-  <% else %>
-    <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-  <% end %>
-</p>
+<section class="app_links_sec">
+  <p class="app_links"><%= link_to "Restaurants", root_path %></p>
+  <p class=“userinfo”>
+    <% if current_user %>
+      Signed in as <%= current_user.email %><br>
+       <%= link_to "Log out", session_path("logout"), :method => :delete %><br>
+       <%= link_to "My Reservations", user_path(session[:user_id]) %>
+    <% else %>
+      <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+    <% end %>
+  </p>
+</section>
 
 <%= yield %>
 

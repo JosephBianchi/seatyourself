@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: #FFFAE2;
+}
+
+.app_links_sec {
+  font-size: 30px;
+  text-decoration: none;
+  text-shadow: 1.5px 1px #ff0000;
+}

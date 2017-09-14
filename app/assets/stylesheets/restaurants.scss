@@ -1,16 +1,7 @@
-
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-
-
-
-
-
-/*===== HEADER STYLES =====*/
-//
 header {
   background-image: url("cook-food-kitchen-eat-54455 (1).jpeg");
-  height: 700px;
-  width: auto;
+  height: 600px;
+  width: 100%;
 
 }
 
@@ -18,32 +9,5 @@ header h1 {
   font-family: 'Lobster Two', cursive;
   color: red;
   font-size: 150px;
-
-}
-
-
-/*===== MAIN CONTENT STYLES =====*/
-
-
-
-/*===== RESTAURANTS STYLES =====*/
-
-.restaurant_row1, .restaurant_row2 {
-  display: flex;
-}
-
-.quarter {
-  width: 24.99%;
-  flex-direction: row;
-  padding: .5%;
-  background: lightgrey;
-}
-.quarter img{
-  width: 100%;
-}
-h3 {
-  text-align: center;
-}
-p {
-  text-align: right;
+  font-size: 16vw;
 }
