@@ -1,1 +1,10 @@
 <h1>Reservations</h1>
+
+<% @reservations.each do |resv| %>
+
+<p> Restaurant: <%= resv.restaurant.name %>  </p>
+ <p> Date: <%= resv.day %> </p>
+ <p> Group Size: <%= resv.partysize %> </P>
+<p> Time: <%=resv.time %>:00 </p>
+ <hr>
+ <% end %>

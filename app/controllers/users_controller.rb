@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def show
-    @reservations =  
+    @reservations = User.find_by(id: params[:id]).reservations
   end
 
 
